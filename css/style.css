@@ -65,13 +65,14 @@ a{
     color: #d59797;
     top: 0;
     left: -200px;
+    z-index: 43343;
 }
 .settings-box.open{
     left: 0;
 }
 .settings-box .toggle{
 	position: absolute;
-	right: -32px;
+	right: -30px;
 	top: 88px;
 	padding: 8px;
 	background: #151515;
@@ -204,7 +205,9 @@ a{
 /* End Nav Bulltes */
 /*  start nav-bar */
 .header-area{
-    box-shadow: rgb(221,221,221) 0 0 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    position: relative;
+    z-index: 12313;
 }
 .header-area .container{
 	display: flex;
@@ -235,6 +238,16 @@ a{
 @media (max-width:992px){
     .header-area  ul{
         display: none;
+        position: absolute;
+        flex-direction: column;
+        background: #fff;
+        right: 0;
+        top: 54px;
+        z-index: 3242;
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        transition: 0.3s all ease-in-out;
     }
     .header-area .toggle-menu{
         display: block;
@@ -242,24 +255,12 @@ a{
 
     }
     .header-area  ul.open{
-        position: absolute;
-        flex-direction: column;
-        background: #fff;
-        left: 10%;
-        /* top: -290px; */
-        top: 56px;
-        z-index: 2;
-        width: 80%;
-        text-align: center;
-        padding: 0;
         display: flex;
-        transition: 0.3s all ease-in-out;
-
     }
     .header-area  ul.open li{
         margin: 0;
     }
-    .header-area  ul.open li a{
+    .header-area  ul  li a{
         padding: 12px 0;
         display: block;
     }
@@ -290,7 +291,7 @@ a{
 .Landing-page .container{
     height: 100%;
     position: relative;
-    z-index: 9999;
+    z-index: 999;
 }
 .Landing-page .lan{
     align-items: center;
@@ -453,7 +454,7 @@ a{
 }
 /* End Gallery */
 /* Start popup thing */
-.overlay{
+.popOverlay{
     position: fixed;
     height:100%;
     width:100%;
@@ -622,7 +623,7 @@ a{
         right:auto;
         left: 50%;
         transform: translateX(-50%);
-        top: -30px;
+        top:-29px;
     }
 
 }

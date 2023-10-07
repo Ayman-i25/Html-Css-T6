@@ -153,7 +153,7 @@ let imgsGallary = document.querySelectorAll(".img-box img");
 imgsGallary.forEach((img) =>{
     img.addEventListener("click", (e) =>{
         let popupOverlay = document.createElement("div");
-        popupOverlay.className = "overlay";
+        popupOverlay.className = "popOverlay";
         document.body.appendChild(popupOverlay);
 
         let popupBox = document.createElement("div");
@@ -174,7 +174,7 @@ imgsGallary.forEach((img) =>{
 document.addEventListener("click", (e) =>{
     if(e.target.className == "close"){
         e.target.parentNode.remove();
-        document.querySelector(".overlay").remove();
+        document.querySelector(".popOverlay").remove();
     }
 })
 
